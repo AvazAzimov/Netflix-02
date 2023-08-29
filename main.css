@@ -1,0 +1,171 @@
+:root {
+    --body-bg-color:#242424:
+    --title-color:#111517;
+    --main-color-bg:#fff;
+    --main-bgcolor-body: #fafafa;
+    --placeholder-color:#848484;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-image: url("./9wzdncrfj3tj-background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container {
+    max-width: 1240px;
+    width: 100%;    
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.stayl__link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding-top: 60px;
+    
+}
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-bottom: 80px;
+    padding-left: 0;
+
+    list-style: none;
+}
+.item {
+    max-width:270px;
+    height: 700px;
+    padding: 10px;
+    background-color:transparent;
+    border-radius: 20px;
+    border: 3px solid #a59999;
+    box-shadow: -2px -6px 100px -3px rgba(247, 0, 0, 0.35) inset;
+    
+}
+.img {
+    max-width:240px;
+    height: 400px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    /* box-shadow: 1px 30px 34px 6px rgba(247, 0, 0, 0.23); */
+}
+.title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+}
+.stayl-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+}
+.stayl-input {
+    position: relative;
+    width: 350px;
+    padding: 10px 15px;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid transparent;
+    background-color: #dc143ca9;
+    border-radius: 30px;
+    outline: none;
+    
+    
+}
+
+::placeholder {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+.stayle__select {
+    width: 350px;
+    padding: 10px 15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    appearance: none;
+    border: 1px solid transparent;
+    background-color: #dc143ca9;
+    border-radius: 30px;
+    outline: none;
+}
+.stayl-btn {
+    width: 100px;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #fafafa;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #dc143ca9;
+    border:1px solid #fafafa;
+    border-radius: 20px;
+    
+}
+
+.time {
+    display:block;
+    margin-right: 85px;
+    margin-bottom: 20px;
+    margin-left: 85px;
+    color: #fff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+    sans-serif;
+}
+.info {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#fff;
+}
+.gener_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.gener_item {
+    background-color: transparent;
+}
+.gener_text {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+    
+}
+.link {
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 5px 30px;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
