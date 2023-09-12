@@ -5,7 +5,6 @@ var elSelect = document.querySelector(".js-select");
 
 // Search metod
 
-
 function movieOur(arr){
   elList.innerHTML = null;
   for (const film of arr) {
@@ -28,8 +27,9 @@ function movieOur(arr){
     elTitle.textContent = film.Title;
     elTime.textContent = film.Year;
     elOverview.textContent = film.overview.split(" ").slice(0,15).join(" ") + "...";
-    
-    
+
+    var fragment = document.createDocumentFragment()
+
     for (const genr of film.genres) {
       
       var genreItem = document.createElement("li");
@@ -53,7 +53,9 @@ function movieOur(arr){
     elLink.textContent = "More"
     elLink.href = film.link;  
     elItem.append(elImg,elTitle,elTime,elOverview,genreList,elLink);
-    elList.appendChild(elItem); 
+    console.log(fragment);
+    fragment.appendChild(elItem);
+    elList.appendChild(fragment); 
   } 
 }
 
