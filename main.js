@@ -2,8 +2,10 @@ var elList = document.querySelector(".list");
 var elForm = document.querySelector(".js-form");
 var elInput = document.querySelector(".js-input")
 var elSelect = document.querySelector(".js-select");
-
+var elSelectSort = document.querySelector(".select_sort");
+var elYearSort = document.querySelector(".select_year");
 // Search metod
+
 
 function movieOur(arr){
   elList.innerHTML = null;
@@ -77,24 +79,85 @@ function selectArr(){
     elSelect.appendChild(elOption);
   })
 }
+
 selectArr()
 
+function sortFunc(resultArr,sortVal) {
+      if (sortVal == "A-Z") {
+        resultArr.sort((a,b) =>{
+          if (a.Title > b.Title) {
+            return 1;
+          }else if (a.Title < b.Title) {
+            return -1;
+          }else {
+            return 0
+          }
+          
+        })
+        }
+  
+      if (sortVal == "Z-A") {
+        resultArr.sort((a,b) =>{
+          if (a.Title > b.Title) {
+            return -1;
+          }else if (a.Title < b.Title) {
+            return 1;
+          }else {
+            return 0
+          }
+        })
+        }
+    
+      };
+
+      function sortYearFunc(resultArr,sortYearVal) {
+        if (sortYearVal == "Max-yeat") {
+          resultArr.sort((a,b) =>{
+            if (a.Title > b.Title) {
+              return 1;
+            }else if (a.Title < b.Title) {
+              return -1;
+            }else {
+              return 0
+            }
+            
+          })
+          }
+    
+        if (sortYearVal == "Min-yeat") {
+          resultArr.sort((a,b) =>{
+            if (a.Title > b.Title) {
+              return -1;
+            }else if (a.Title < b.Title) {
+              return 1;
+            }else {
+              return 0
+            }
+          })
+          }
+      
+        };
+  
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault(); 
+  var sortVal = elSelectSort.value;
+  var sortYearVal = elYearSort.value;
   var  selectVal = elSelect.value;
   var inputValue = elInput.value;
   var newRegex = new RegExp(inputValue , "gi")
   console.log(inputValue);
-  
+
   var resultArr = films.filter(item => {
     return item.Title.match(newRegex)&&(item.genres.includes(selectVal) || selectVal ==("all") );
   });
+
   console.log(resultArr);
   if(resultArr.length > 0) {
+    sortFunc(resultArr,sortVal)
     movieOur(resultArr)
   }else {
     elList.textContent = "Not found 404"
   }
-  
-});
+})
+
 movieOur(films)
