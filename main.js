@@ -107,8 +107,11 @@ function sortFunc(resultArr,sortVal) {
           }
         })
         }
-    
+        if (sortVal == "All") {
+          return 0;
+        }
       };
+  
 
       function sortYearFunc(resultArr,sortYearVal) {
         if (sortYearVal == "Max-yeat") {
@@ -135,8 +138,11 @@ function sortFunc(resultArr,sortVal) {
             }
           })
           }
-      
+          if (sortYearVal == "All") {
+            return 0;
+          }
         };
+   
   
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault(); 
